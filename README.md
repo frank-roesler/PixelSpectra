@@ -1,11 +1,11 @@
 # PixelSpectra
-This Matlab package computes the Dirichlet eigenvalues and eigenfunctions of domains defined through by their characteristic function on a grid. The computation is done via Finite Element approximation on a uniform triangulation, according to a method studied in https://alexeistepa.github.io/rough_eig_preprint.pdf.  
+This Matlab package computes the Dirichlet eigenvalues and eigenfunctions of domains defined through by their characteristic function on a grid. The computation is done via Finite Element approximation on a uniform triangulation, according to a method studied in https://arxiv.org/abs/2104.09444.  
 The main building blocks of the routine are
-* ```build_mesh(h)``` computes the triangulation (of a filled Julia set by default) for a given mesh size ```h```;
-* ```refine_mesh(c4n,n4e)``` computes a refined mesh from a given triangulation ```(c4n,n4e)``` by splitting every triangle into 4 smaller ones;
-* ```compute_eigenfunctions.m``` computes the lowest eigenvalues and eigenfunctions for a given triangulation;
-* ```compute_lowest_eig.m``` computes a high-accuracy approximation of the lowest eigenvalue using the Rayleigh-Ritz method & gradient descent.
-A pre-computed triangulation for a filled Julia set is included to make the code executable out-of-the-box, and the code in ```build_mesh``` can easily be adapted to arbitrary domains.
+* `build_mesh(h)` computes the triangulation (of a filled Julia set by default) for a given mesh size `h`;
+* `refine_mesh(c4n,n4e)` computes a refined mesh from a given triangulation `[c4n,n4e]` by splitting every triangle into 4 smaller ones;
+* `compute_eigenfunctions.m` computes the lowest eigenvalues and eigenfunctions for a given triangulation;
+* `compute_lowest_eig.m` computes a high-accuracy approximation of the lowest eigenvalue using the Rayleigh-Ritz method & gradient descent.
+A pre-computed triangulation for a filled Julia set is included to make the code executable out-of-the-box, and the code in `build_mesh.m` can easily be adapted to arbitrary domains.
 
 The Finite Element code used in this package is partially adapted from [Bartels S. *Numerical approximation of partial differential equations.* Springer; 2016]
 
